@@ -28,4 +28,6 @@ public class ConfigScreen implements ConfigData {
     public boolean isEULA = false; //使用者是否同意宇宙通訊EULA
     @ConfigEntry.Gui.Excluded
     public List<String> modBlackList = new ArrayList<String>(); //模組翻譯黑名單，可輸入資料夾名稱，或是檔案名稱
+    @ConfigEntry.Gui.Excluded
+    public String additionalLanguage = "en_us"; 
 }

@@ -16,6 +16,7 @@ repositories {
     }
     maven { url "https://maven.blamejared.com" } //Patchouli
     maven { url "https://repo1.maven.org/maven2/" }
+    maven { url "https://maven.bai.lol" }// waila
     flatDir{ dirs "lib" }
 }
 
@@ -61,6 +62,12 @@ dependencies {
     }
     modImplementation include("io.github.cottonmc:LibGui:4.1.0+1.17")
     modImplementation("com.terraformersmc:modmenu:2.0.2")
+    
+	  // compile against the API
+	  modCompileOnly "mcp.mobius.waila:wthit-api:fabric-${wthitVersion}"
+	
+	  // run against the full jar
+	  modRuntime "mcp.mobius.waila:wthit:fabric-${wthitVersion}"
 }
 
 processResources {
